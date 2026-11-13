@@ -1,0 +1,21 @@
+{
+  "name": "tabassat-portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Website for M. Tabassat - Senior Full-Stack & Systems Engineer",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 server.py 3000",
+    "dev": "python3 server.py 3000",
+    "serve": "node -e \"const http = require('http'); const fs = require('fs'); const path = require('path'); const port = process.env.PORT || 3000; const mime = {'.html':'text/html','.css':'text/css','.js':'application/javascript','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.ico':'image/x-icon'}; http.createServer((req, res) => { let fp = path.join(__dirname, req.url === '/' ? 'index.html' : req.url.split('?')[0]); fs.readFile(fp, (err, data) => { if (err) { res.writeHead(404); res.end('Not found'); } else { res.writeHead(200, {'Content-Type': mime[path.extname(fp)] || 'text/plain'}); res.end(data); } }); }).listen(port, () => console.log('Portfolio running at http://localhost:' + port));\""
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "fullstack",
+    "engineer",
+    "showcase"
+  ],
+  "author": "M. Tabassat <md.tabassat@gmail.com>",
+  "license": "MIT"
+}
+
